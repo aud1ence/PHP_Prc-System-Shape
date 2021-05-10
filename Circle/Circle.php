@@ -1,7 +1,7 @@
 <?php
 
 use JetBrains\PhpStorm\Pure;
-
+include_once "../index.php";
 class Circle extends Shape
 {
     public int|float $radius;

@@ -4,8 +4,8 @@ use JetBrains\PhpStorm\Pure;
 
 class Rectangle extends Shape
 {
-    public int|float $width;
-    public int|float $height;
+    public int $width;
+    public int $height;
 
     #[Pure] public function __construct(string $name,
                                         int|float $width,
@@ -16,11 +16,13 @@ class Rectangle extends Shape
         $this->height = $height;
     }
 
-    public function calculateArea(): float|int {
+    public function calculateArea(): float|int
+    {
         return $this->height * $this->width;
     }
 
-    public function calculatePerimeter(): float|int {
+    public function calculatePerimeter(): float|int
+    {
         return ($this->height + $this->width) * 2;
     }
 }
